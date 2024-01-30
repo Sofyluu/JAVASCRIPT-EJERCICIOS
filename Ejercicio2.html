@@ -1,0 +1,36 @@
+<script>
+    let initialList = ["una cadena", 3, 9, 1, 10, 500, 1, 10, true, 150, false, 'hola mundo', 40];
+    let numbers = [];
+    function filter(initialList) {
+        for (let i = 0; i < initialList.length; i++) {
+            if (typeof initialList[i] == "number") {
+                numbers.push(initialList[i]);
+            }
+        }
+    }
+    filter(initialList);
+
+    function bubbleSort(number) {
+        let changes = true;
+        while (changes) {
+            changes = false;
+            for (let j = 0; j < numbers.length - 1; j++) {
+                if (numbers[j] < numbers[j + 1]) {
+                    let tempValue = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = tempValue;
+                    changes = true
+                }
+            }
+        }
+        console.log(numbers)
+    }
+    bubbleSort(numbers);
+
+
+
+
+
+
+
+</script>
